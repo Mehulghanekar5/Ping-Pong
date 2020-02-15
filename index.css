@@ -1,0 +1,123 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameBox{
+    width: 900px;
+    height: 700px;
+    background: gray;
+    position: relative;
+}
+
+.gameBox .rod{
+    width: 150px;
+    height: 20px;
+    background: goldenrod;
+}
+
+.gameBox .bottomRod{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.gameBox .topRod{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.gameBox .ball{
+    position: absolute;
+    background: crimson;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.detailsBox{
+    width: 300px;
+    height: 700px;
+    background: salmon;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsBox .playerImage{
+    width: inherit;
+    height: 200px;
+    background: salmon;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsBox .playerImage img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.detailsBox .playerName{
+    width: inherit;
+    height: 50px;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsBox .scoreboard{
+    width: inherit;
+    height: 450px;
+}
+
+.detailsBox .scoreboard .fullScoreboard{
+    width: inherit;
+    height: inherit;
+    background: darkslateblue;
+    display: none;
+}
+
+.detailsBox .scoreboard .fullScoreboard table{
+    width: inherit;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.detailsBox .scoreboard .fullScoreboard table thead{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.detailsBox .scoreboard .fullScoreboard table td{
+    padding: 10px 15px;
+}
+
+.detailsBox .scoreboard .eachGameScoreboard{
+    width: inherit;
+    height: inherit;
+    background: darkslateblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailsBox .scoreboard .eachGameScoreboard p{
+    margin: 0;
+    font-size: 7rem;
+}
