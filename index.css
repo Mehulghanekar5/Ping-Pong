@@ -1,6 +1,17 @@
+:root{
+    --ballColor: linear-gradient(90deg, rgba(0,52,255,1) 0%, rgba(0,202,255,1) 100%);
+    --gameBoxColor: linear-gradient(90deg, rgba(24,84,0,1) 0%, rgba(0,176,23,1) 100%);
+    --rodColor: #ffb807;
+}
+
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .main{
@@ -16,14 +27,14 @@ body{
 .gameBox{
     width: 900px;
     height: 700px;
-    background: #557b19;
+    background: var(--gameBoxColor);
     position: relative;
 }
 
 .gameBox .rod{
     width: 150px;
     height: 20px;
-    background: goldenrod;
+    background: var(--rodColor);
     position: absolute;
     left: 50%;
 }
@@ -42,10 +53,23 @@ body{
 
 .gameBox .ball{
     position: absolute;
-    background: crimson;
+    background: var(--ballColor);
     width: 25px;
     height: 25px;
     border-radius: 50%;
+}
+
+.gameBox .pause{
+    background: #557b19;
+    border-left: 30px solid #b81111;
+    border-right: 30px solid #b81111;
+    height: 120px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
 .detailsBox{
