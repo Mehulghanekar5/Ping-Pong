@@ -1,7 +1,7 @@
 :root{
-    --ballColor: linear-gradient(90deg, rgba(0,52,255,1) 0%, rgba(0,202,255,1) 100%);
-    --gameBoxColor: linear-gradient(90deg, rgba(24,84,0,1) 0%, rgba(0,176,23,1) 100%);
-    --rodColor: #ffb807;
+    --ballColor: linear-gradient(90deg, #0034ff 0%, #00caff 100%);
+    --gameBoxColor: linear-gradient(90deg, #227601 0%, #00b017 100%);
+    --rodColor: #003461;
 }
 
 *{
@@ -18,6 +18,7 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: sans-serif;
+    background: linear-gradient(135deg, #a55454, #0db2dc);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,6 +30,7 @@ body{
     height: 700px;
     background: var(--gameBoxColor);
     position: relative;
+    box-shadow: -2px 0 20px 2px black;
 }
 
 .gameBox .rod{
@@ -37,6 +39,7 @@ body{
     background: var(--rodColor);
     position: absolute;
     left: 50%;
+    transform: translate(-50%);
 }
 
 .gameBox .bottomRod{
@@ -53,14 +56,16 @@ body{
 
 .gameBox .ball{
     position: absolute;
+    left: 50%;
+    top: 50%;
     background: var(--ballColor);
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .gameBox .pause{
-    background: #557b19;
     border-left: 30px solid #b81111;
     border-right: 30px solid #b81111;
     height: 120px;
@@ -72,20 +77,74 @@ body{
     display: none;
 }
 
+.gameBox .message{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 600;
+    opacity: 0.7;
+    text-align: center;
+}
+
 .detailsBox{
     width: 300px;
     height: 700px;
-    background: salmon;
+    background: #5f5f5f;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 0 20px 2px black;
+}
+
+.detailsBox .controlBtn{
+    width: inherit;
+    height: 50px;
+    background: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsBox .controlBtn button{
+    width: 50%;
+    height: inherit;
+    background: #22c7a1;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.detailsBox .controlBtn button:nth-child(1){
+    border-right: 0.5px solid black;
+}
+
+.detailsBox .controlBtn button:nth-child(2){
+    border-left: 0.5px solid black;
+}
+
+.detailsBox .controlBtn button:hover{
+    background: #005f49;
+    color: white;
 }
 
 .detailsBox .playerImage{
     width: inherit;
     height: 200px;
-    background: salmon;
+    background: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,15 +161,18 @@ body{
     width: inherit;
     height: 50px;
     border-bottom: 2px solid black;
+    background: inherit;
+    color: #ffb807;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .detailsBox .scoreboard{
     width: inherit;
-    height: 450px;
+    height: 400px;
 }
 
 .detailsBox .scoreboard .fullScoreboard{
@@ -123,16 +185,38 @@ body{
 .detailsBox .scoreboard .fullScoreboard table{
     width: inherit;
     border: 1px solid black;
+    border-spacing: 0;
     text-align: center;
-}
-
-.detailsBox .scoreboard .fullScoreboard table thead{
-    font-size: 1.3rem;
-    font-weight: 600;
 }
 
 .detailsBox .scoreboard .fullScoreboard table td{
     padding: 10px 15px;
+}
+
+.detailsBox .scoreboard .fullScoreboard table thead{
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: #ffed87;
+    color: black;
+}
+
+.detailsBox .scoreboard .fullScoreboard table tbody{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(odd){
+    background: #323C50;
+}
+
+.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(even){
+    background: #222631;;
+}
+
+.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(6){
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .detailsBox .scoreboard .eachGameScoreboard{
