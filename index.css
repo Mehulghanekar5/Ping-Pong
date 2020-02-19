@@ -1,20 +1,20 @@
-:root{
+:root {
     --ballColor: linear-gradient(90deg, #0034ff 0%, #00caff 100%);
     --gameBoxColor: linear-gradient(90deg, #227601 0%, #00b017 100%);
-    --rodColor: #003461;
+    --rodColor: linear-gradient(90deg, #f1ff00 10%, #003461 10%, #003461 90%, #f1ff00 90%, #f1ff00 100%);
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.main{
+.main {
     width: 100vw;
     height: 100vh;
     font-family: sans-serif;
@@ -25,7 +25,7 @@ body{
     align-items: center;
 }
 
-.gameBox{
+.gameBox {
     width: 900px;
     height: 700px;
     background: var(--gameBoxColor);
@@ -33,7 +33,7 @@ body{
     box-shadow: -2px 0 20px 2px black;
 }
 
-.gameBox .rod{
+.gameBox .rod {
     width: 150px;
     height: 20px;
     background: var(--rodColor);
@@ -42,19 +42,19 @@ body{
     transform: translate(-50%);
 }
 
-.gameBox .bottomRod{
+.gameBox .bottomRod {
     bottom: 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.gameBox .topRod{
+.gameBox .topRod {
     top: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.gameBox .ball{
+.gameBox .ball {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -65,7 +65,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.gameBox .pause{
+.gameBox .pause {
     border-left: 30px solid #b81111;
     border-right: 30px solid #b81111;
     height: 120px;
@@ -77,7 +77,7 @@ body{
     display: none;
 }
 
-.gameBox .message{
+.gameBox .message {
     width: 80%;
     position: absolute;
     top: 20%;
@@ -90,7 +90,7 @@ body{
     text-align: center;
 }
 
-.detailsBox{
+.detailsBox {
     width: 300px;
     height: 700px;
     background: #5f5f5f;
@@ -101,7 +101,7 @@ body{
     box-shadow: 2px 0 20px 2px black;
 }
 
-.detailsBox .controlBtn{
+.detailsBox .controlBtn {
     width: inherit;
     height: 50px;
     background: inherit;
@@ -111,7 +111,7 @@ body{
     align-items: center;
 }
 
-.detailsBox .controlBtn button{
+.detailsBox .controlBtn button {
     width: 50%;
     height: inherit;
     background: #22c7a1;
@@ -128,20 +128,20 @@ body{
     transition: all 0.3s;
 }
 
-.detailsBox .controlBtn button:nth-child(1){
+.detailsBox .controlBtn button:nth-child(1) {
     border-right: 0.5px solid black;
 }
 
-.detailsBox .controlBtn button:nth-child(2){
+.detailsBox .controlBtn button:nth-child(2) {
     border-left: 0.5px solid black;
 }
 
-.detailsBox .controlBtn button:hover{
+.detailsBox .controlBtn button:hover {
     background: #005f49;
     color: white;
 }
 
-.detailsBox .playerImage{
+.detailsBox .playerImage {
     width: inherit;
     height: 200px;
     background: inherit;
@@ -151,13 +151,13 @@ body{
     align-items: center;
 }
 
-.detailsBox .playerImage img{
+.detailsBox .playerImage img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
 }
 
-.detailsBox .playerName{
+.detailsBox .playerName {
     width: inherit;
     height: 50px;
     border-bottom: 2px solid black;
@@ -170,56 +170,57 @@ body{
     overflow: hidden;
 }
 
-.detailsBox .scoreboard{
+.detailsBox .scoreboard {
     width: inherit;
     height: 400px;
 }
 
-.detailsBox .scoreboard .fullScoreboard{
+.detailsBox .scoreboard .fullScoreboard {
     width: inherit;
     height: inherit;
     background: darkslateblue;
     display: none;
 }
 
-.detailsBox .scoreboard .fullScoreboard table{
+.detailsBox .scoreboard .fullScoreboard table {
     width: inherit;
     border: 1px solid black;
     border-spacing: 0;
     text-align: center;
 }
 
-.detailsBox .scoreboard .fullScoreboard table td{
+.detailsBox .scoreboard .fullScoreboard table td {
     padding: 10px 15px;
 }
 
-.detailsBox .scoreboard .fullScoreboard table thead{
+.detailsBox .scoreboard .fullScoreboard table thead {
     font-size: 1.5rem;
     font-weight: 600;
     background: #ffed87;
     color: black;
 }
 
-.detailsBox .scoreboard .fullScoreboard table tbody{
+.detailsBox .scoreboard .fullScoreboard table tbody {
     font-size: 1.2rem;
     font-weight: 500;
     color: white;
 }
 
-.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(odd){
+.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(odd) {
     background: #323C50;
 }
 
-.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(even){
-    background: #222631;;
+.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(even) {
+    background: #222631;
+    ;
 }
 
-.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(6){
+.detailsBox .scoreboard .fullScoreboard table tbody tr:nth-child(6) {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.detailsBox .scoreboard .eachGameScoreboard{
+.detailsBox .scoreboard .eachGameScoreboard {
     width: inherit;
     height: inherit;
     background: darkslateblue;
@@ -228,7 +229,7 @@ body{
     align-items: center;
 }
 
-.detailsBox .scoreboard .eachGameScoreboard p{
+.detailsBox .scoreboard .eachGameScoreboard p {
     margin: 0;
     font-size: 7rem;
 }

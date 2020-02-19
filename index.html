@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,8 +8,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
 </head>
+
 <body>
     <div class="main">
+        <!-- GameBox -->
         <div class="gameBox">
             <div class="rod bottomRod"></div>
             <div class="rod topRod"></div>
@@ -18,6 +21,8 @@
                 Click on New Game to Start.
             </div>
         </div>
+
+        <!-- Game Details Box -->
         <div class="detailsBox">
             <div class="controlBtn">
                 <button onclick="setupNewGame()">New Game</button>
@@ -29,6 +34,8 @@
             <div class="playerName">
                 <h1></h1>
             </div>
+
+            <!-- Two Scoreboard one is Full Scoreboard & other is Each Round Score -->
             <div class="scoreboard">
                 <div class="fullScoreboard">
                     <table>
@@ -49,4 +56,5 @@
     </div>
     <script src='index.js'></script>
 </body>
+
 </html>
