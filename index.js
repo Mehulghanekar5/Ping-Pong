@@ -4,6 +4,8 @@ var rods = document.getElementsByClassName('rod');
 var ball = document.getElementsByClassName('ball')[0];
 var pause = document.getElementsByClassName('pause')[0];
 var message = document.getElementsByClassName('message')[0];
+var tapSound = document.querySelector('.tapSound');
+var outSound = document.querySelector('.outSound');
 
 //HTML Elements of DetailsBox
 var controlBtn = document.querySelectorAll('.detailsBox .controlBtn button');
@@ -125,6 +127,7 @@ function startGame() {
                 scoreSpeed = getScoreSpeed(ballMovingSpeed);
                 roundScore += scoreSpeed;
                 eachGameScoreboardP.innerHTML = roundScore;
+                tapSound.play();
             } else {
                 gameOver();
             }
@@ -136,6 +139,7 @@ function startGame() {
                 scoreSpeed = getScoreSpeed(ballMovingSpeed);
                 roundScore += scoreSpeed;
                 eachGameScoreboardP.innerHTML = roundScore;
+                tapSound.play();
             } else {
                 gameOver();
             }
@@ -153,6 +157,7 @@ function startGame() {
 //Round Finished
 function gameOver() {
     //clear Interval ID of Finished Round
+    outSound.play();
     clearInterval(gameID);
     gameID = null;
     out = true;
@@ -363,7 +368,7 @@ function moveRight() {
 }
 
 //Space, A & D keyPress Event Handlers
-document.addEventListener('keypress', function(e) {
+document.addEventListener('keydown', function(e) {
     //Handle Space Press only when New Game is Started
     if (e.code == "Space" && !out && gameState != "") {
         if (gameID != null) {
@@ -387,11 +392,11 @@ document.addEventListener('keypress', function(e) {
     }
     //Handle A & D only when game is in Running State
     if (gameState == "running") {
-        if (e.code == "KeyA") {
+        if (e.code == "KeyA" || e.keyCode == "37") {
             moveLeft();
             return;
         }
-        if (e.code == "KeyD") {
+        if (e.code == "KeyD" || e.keyCode == "39") {
             moveRight();
             return;
         }
